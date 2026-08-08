@@ -1,6 +1,3 @@
-2
-
-Automatic Zoom
 Q4. Zepto Support Ticket Manager
 DigiPlus IT Agentic AI Hackathon · 6-hour build · Thakur College of Engineering & Technology
 
