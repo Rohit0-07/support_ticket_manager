@@ -62,3 +62,17 @@ class ReplyLog(Base):
     sent_at = Column(String, nullable=True)
     draft_history = Column(String, nullable=True, default="[]")
     created_at = Column(String, nullable=False)
+
+
+class HumanDecisionLog(Base):
+    __tablename__ = "human_decision_log"
+
+    ticket_id = Column(String, primary_key=True, index=True)
+    order_id = Column(String, nullable=False)
+    agent_action = Column(String, nullable=False)          # 'approve' | 'override' | 'reject'
+    original_action = Column(String, nullable=True)        # suggested action at decision time
+    final_action = Column(String, nullable=True)           # final action (approve/override); null for reject
+    rejection_reason = Column(String, nullable=True)       # required for reject
+    final_reply = Column(String, nullable=True)            # edited reply body during override
+    agent_id = Column(String, nullable=False)
+    created_at = Column(String, nullable=False)            # ISO-8601 UTC

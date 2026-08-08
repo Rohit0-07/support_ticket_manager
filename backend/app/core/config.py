@@ -42,6 +42,9 @@ class Settings(BaseSettings):
     DASHBOARD_CONFIDENCE_MEDIUM: float = 0.40  # EC-04: medium-confidence bucket floor
     DASHBOARD_TOP_EVIDENCE: int = 3         # BR-03: top-N evidence shown (aligns with F3 top-N precedents)
 
+    # Human Override Controls settings (env prefix: STM_)
+    HUMAN_OVERRIDE_REFUND_RATIO: float = 1.0  # US-02: manual refund = 100% of order value (capped at order value)
+
     model_config = SettingsConfigDict(env_prefix="STM_")
 
 
