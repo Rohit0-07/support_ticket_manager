@@ -1,57 +1,95 @@
-#!/usr/bin/env bash
-set -e
+#!/bin/bash
 
-# Feature Lifecycle Orchestration Loop
-# Model enforced: gemini-2.5-flash (or gemini-3.6-flash-low / flash model via opencode flag)
+# Array of features from INDEX.md
+FEATURES=(
+    "data-ingestion"
+    "similarity-engine"
+    "resolution-engine"
+    "reply-drafting"
+    "two-lane-dashboard"
+)
 
-FEATURES=("F2-similarity-engine" "F3-resolution-engine" "F4-reply-drafting" "F5-two-lane-dashboard" "F6-human-override-controls" "F7-live-ticket-simulation")
-MODEL="google/gemini-2.5-flash"
+echo "Starting Feature Lifecycle Loop..."
 
-echo "=========================================================="
-echo "Starting Lifecycle Loop for Support Ticket Manager Features"
-echo "=========================================================="
+AGY_CMD="agy --model gemini-3.6-flash-low --effort low --dangerously-skip-permissions --print-timeout 30m -p"
 
-for FEATURE in "${FEATURES[@]}"; do
-    SESSION_NAME="feat-${FEATURE}"
-    echo ""
-    echo "----------------------------------------------------------"
-    echo "Processing Feature: ${FEATURE}"
-    echo "Session Name: ${SESSION_NAME}"
-    echo "----------------------------------------------------------"
+for feature in "${FEATURES[@]}"; do
+    echo "========================================"
+    echo "Starting lifecycle for feature: $feature"
+    echo "========================================"
+    
+    # Locate the feature directory (could be $feature or F1-$feature etc.)
+    FEAT_DIR="features/$feature"
+    if [ ! -d "$FEAT_DIR" ]; then
+        # Try to find it if it has a prefix like F1-
+        MATCHING_DIR=$(ls -d features/*-$feature 2>/dev/null | head -n 1)
+        if [ -n "$MATCHING_DIR" ]; then
+            FEAT_DIR="$MATCHING_DIR"
+        fi
+    fi
 
-    # Step 1: /generate-spec
-    echo "[1/6] Generating Spec for ${FEATURE}..."
-    opencode run --model "${MODEL}" --session "${SESSION_NAME}" --title "${SESSION_NAME}" "/generate-spec ${FEATURE}"
+    # Check if completely done
+    if [ -f "$FEAT_DIR/3_summary.md" ]; then
+        echo "Feature $feature is already fully complete (3_summary.md exists). Skipping."
+        continue
+    fi
 
-    # Step 2: /generate-tech-spec
-    echo "[2/6] Generating Tech Spec for ${FEATURE}..."
-    opencode run --model "${MODEL}" --session "${SESSION_NAME}" --title "${SESSION_NAME}" "/generate-tech-spec ${FEATURE}"
+    # 1. Spec
+    if [ ! -f "$FEAT_DIR/1_spec.md" ]; then
+        echo "Running /generate-spec $feature..."
+        $AGY_CMD "/generate-spec $feature"
+    else
+        echo "Skipping /generate-spec (1_spec.md exists)"
+    fi
 
-    # Step 3: /generate-tests
-    echo "[3/6] Generating Tests for ${FEATURE}..."
-    opencode run --model "${MODEL}" --session "${SESSION_NAME}" --title "${SESSION_NAME}" "/generate-tests ${FEATURE}"
+    # Update FEAT_DIR in case it was just created
+    if [ ! -d "$FEAT_DIR" ]; then
+        MATCHING_DIR=$(ls -d features/*-$feature 2>/dev/null | head -n 1)
+        if [ -n "$MATCHING_DIR" ]; then
+            FEAT_DIR="$MATCHING_DIR"
+        fi
+        # Default fallback
+        if [ ! -d "$FEAT_DIR" ]; then
+            FEAT_DIR="features/$feature"
+        fi
+    fi
 
-    # Step 4: /implement-feature
-    echo "[4/6] Implementing Feature ${FEATURE}..."
-    opencode run --model "${MODEL}" --session "${SESSION_NAME}" --title "${SESSION_NAME}" "/implement-feature ${FEATURE}"
+    # 2. Tech Spec
+    if [ ! -f "$FEAT_DIR/2_tech_spec.md" ]; then
+        echo "Running /generate-tech-spec $feature..."
+        $AGY_CMD "/generate-tech-spec $feature"
+    else
+        echo "Skipping /generate-tech-spec (2_tech_spec.md exists)"
+    fi
 
-    # Step 5: /validate-feature (and run pytest using uv environment)
-    echo "[5/6] Validating Feature ${FEATURE}..."
-    PYTHONPATH=backend uv run pytest
-    opencode run --model "${MODEL}" --session "${SESSION_NAME}" --title "${SESSION_NAME}" "/validate-feature ${FEATURE}"
+    # 3. Tests
+    TEST_FEAT_NAME="${feature//-/_}"
+    if [ ! -f "$FEAT_DIR/tests/test_${TEST_FEAT_NAME}.py" ]; then
+        echo "Running /generate-tests $feature..."
+        $AGY_CMD "/generate-tests $feature"
+    else
+        echo "Skipping /generate-tests (tests/test_${TEST_FEAT_NAME}.py exists)"
+    fi
 
-    # Step 6: /generate-summary
-    echo "[6/6] Generating Summary for ${FEATURE}..."
-    opencode run --model "${MODEL}" --session "${SESSION_NAME}" --title "${SESSION_NAME}" "/generate-summary ${FEATURE}"
+    # 4. Implement Feature
+    echo "Running /implement-feature $feature..."
+    $AGY_CMD "/implement-feature $feature"
 
-    # Commit changes for feature completion
-    echo "Committing completed feature: ${FEATURE}..."
+    # 5. Validate
+    echo "Running /validate-feature $feature..."
+    $AGY_CMD "/validate-feature $feature"
+
+    # 6. Summary
+    if [ ! -f "$FEAT_DIR/3_summary.md" ]; then
+        echo "Running /generate-summary $feature..."
+        $AGY_CMD "/generate-summary $feature"
+    fi
+
+    echo "Committing changes for $feature..."
     git add .
-    git commit -m "Completed ${FEATURE}" || echo "No changes to commit for ${FEATURE}"
+    git commit -m "Complete feature: $feature" || echo "No changes to commit."
 
-    echo "Successfully completed lifecycle for ${FEATURE}"
+    echo "Agy session completed for $feature."
 done
 
-echo "=========================================================="
-echo "All feature lifecycles completed successfully!"
-echo "=========================================================="
+echo "All features processed!"
