@@ -18,6 +18,14 @@ class Settings(BaseSettings):
     # Auto-seed on startup
     AUTO_SEED_ON_STARTUP: bool = False
 
+    # Similarity Engine settings (env prefix: STM_)
+    SIMILARITY_TOP_N_DEFAULT: int = 3
+    SIMILARITY_TOP_N_MAX: int = 10
+    SIMILARITY_MIN_SCORE: float = 0.10          # below this → NO_SIMILAR_CASES
+    SIMILARITY_MIN_MEANINGFUL_TOKENS: int = 3   # EC-03 damping threshold
+    SIMILARITY_MAX_QUERY_CHARS: int = 512       # EC-06 truncation length
+    SIMILARITY_DEDUPE_IDENTICAL: bool = True    # EC-04
+
     model_config = SettingsConfigDict(env_prefix="STM_")
 
 

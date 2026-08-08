@@ -11,17 +11,48 @@ FEATURES=(
 
 echo "Starting Feature Lifecycle Loop..."
 
-AGY_CMD="agy --model gemini-3.6-flash-low --effort low --dangerously-skip-permissions --print-timeout 30m -p"
+# agy command with --add-dir . so it knows the workspace context
+AGY_CMD="agy --model gemini-3.6-flash-low --effort low --dangerously-skip-permissions --print-timeout 30m --add-dir . -p"
+
+# Helper to run harness command with injected rules
+run_harness_cmd() {
+    local cmd_name=$1
+    local target_feature=$2
+    local cmd_file=".opencode/commands/${cmd_name}.md"
+    
+    echo "Running /$cmd_name $target_feature..."
+    
+    if [ -f "$cmd_file" ]; then
+        # Read the command markdown
+        local cmd_content=$(cat "$cmd_file")
+        
+        # Build a robust prompt that forces the LLM to follow the slash command rules
+        local full_prompt="You are executing the custom project harness command: /$cmd_name $target_feature
+
+Here are the strict instructions, isolation rules, and output targets for this command:
+=================================================
+$cmd_content
+=================================================
+
+Please perform the task for the feature: $target_feature now.
+Crucial: You must write the output files to the actual workspace directory exactly as specified in the Output Target section. Do NOT hallucinate paths or write to a scratch directory."
+
+        # Execute
+        $AGY_CMD "$full_prompt"
+    else
+        echo "Error: Command definition $cmd_file not found. Running generically."
+        $AGY_CMD "/$cmd_name $target_feature"
+    fi
+}
 
 for feature in "${FEATURES[@]}"; do
     echo "========================================"
     echo "Starting lifecycle for feature: $feature"
     echo "========================================"
     
-    # Locate the feature directory (could be $feature or F1-$feature etc.)
+    # Locate the feature directory
     FEAT_DIR="features/$feature"
     if [ ! -d "$FEAT_DIR" ]; then
-        # Try to find it if it has a prefix like F1-
         MATCHING_DIR=$(ls -d features/*-$feature 2>/dev/null | head -n 1)
         if [ -n "$MATCHING_DIR" ]; then
             FEAT_DIR="$MATCHING_DIR"
@@ -36,8 +67,7 @@ for feature in "${FEATURES[@]}"; do
 
     # 1. Spec
     if [ ! -f "$FEAT_DIR/1_spec.md" ]; then
-        echo "Running /generate-spec $feature..."
-        $AGY_CMD "/generate-spec $feature"
+        run_harness_cmd "generate-spec" "$feature"
     else
         echo "Skipping /generate-spec (1_spec.md exists)"
     fi
@@ -48,7 +78,6 @@ for feature in "${FEATURES[@]}"; do
         if [ -n "$MATCHING_DIR" ]; then
             FEAT_DIR="$MATCHING_DIR"
         fi
-        # Default fallback
         if [ ! -d "$FEAT_DIR" ]; then
             FEAT_DIR="features/$feature"
         fi
@@ -56,8 +85,7 @@ for feature in "${FEATURES[@]}"; do
 
     # 2. Tech Spec
     if [ ! -f "$FEAT_DIR/2_tech_spec.md" ]; then
-        echo "Running /generate-tech-spec $feature..."
-        $AGY_CMD "/generate-tech-spec $feature"
+        run_harness_cmd "generate-tech-spec" "$feature"
     else
         echo "Skipping /generate-tech-spec (2_tech_spec.md exists)"
     fi
@@ -65,24 +93,20 @@ for feature in "${FEATURES[@]}"; do
     # 3. Tests
     TEST_FEAT_NAME="${feature//-/_}"
     if [ ! -f "$FEAT_DIR/tests/test_${TEST_FEAT_NAME}.py" ]; then
-        echo "Running /generate-tests $feature..."
-        $AGY_CMD "/generate-tests $feature"
+        run_harness_cmd "generate-tests" "$feature"
     else
         echo "Skipping /generate-tests (tests/test_${TEST_FEAT_NAME}.py exists)"
     fi
 
     # 4. Implement Feature
-    echo "Running /implement-feature $feature..."
-    $AGY_CMD "/implement-feature $feature"
+    run_harness_cmd "implement-feature" "$feature"
 
     # 5. Validate
-    echo "Running /validate-feature $feature..."
-    $AGY_CMD "/validate-feature $feature"
+    run_harness_cmd "validate-feature" "$feature"
 
     # 6. Summary
     if [ ! -f "$FEAT_DIR/3_summary.md" ]; then
-        echo "Running /generate-summary $feature..."
-        $AGY_CMD "/generate-summary $feature"
+        run_harness_cmd "generate-summary" "$feature"
     fi
 
     echo "Committing changes for $feature..."
