@@ -46,3 +46,19 @@ class ResolutionDecisionLog(Base):
     reasoning = Column(String, nullable=False)
     refund_amount = Column(Float, nullable=True)
     created_at = Column(String, nullable=False)
+
+
+class ReplyLog(Base):
+    __tablename__ = "reply_log"
+
+    ticket_id = Column(String, primary_key=True, index=True)
+    variant = Column(String, nullable=False)
+    original_draft = Column(String, nullable=False)
+    final_body = Column(String, nullable=False)
+    status = Column(String, nullable=False)
+    cited_ticket_ids = Column(String, nullable=False, default="[]")
+    edited_by = Column(String, nullable=True)
+    edited_at = Column(String, nullable=True)
+    sent_at = Column(String, nullable=True)
+    draft_history = Column(String, nullable=True, default="[]")
+    created_at = Column(String, nullable=False)
