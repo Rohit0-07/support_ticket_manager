@@ -45,6 +45,11 @@ class Settings(BaseSettings):
     # Human Override Controls settings (env prefix: STM_)
     HUMAN_OVERRIDE_REFUND_RATIO: float = 1.0  # US-02: manual refund = 100% of order value (capped at order value)
 
+    # Live Ticket Simulation settings (env prefix: STM_)
+    SIMULATION_DEFAULT_PACE_SECONDS: float = 3.0   # US-02 S1: pace used when pace_seconds omitted
+    SIMULATION_MIN_PACE_SECONDS: float = 1.0       # EC-05: floor; values below are clamped up
+    SIMULATION_MAX_PACE_SECONDS: float = 30.0      # EC-05: ceiling; values above are clamped down
+
     model_config = SettingsConfigDict(env_prefix="STM_")
 
 

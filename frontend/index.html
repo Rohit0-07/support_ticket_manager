@@ -1,52 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support Ticket Manager — Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="app-header">
-    <h1>Support Ticket Manager</h1>
-    <p class="subtitle">Two-lane overview of every processed ticket</p>
-  </header>
-
-  <main class="page">
-    <div id="error-banner" class="error-banner" hidden>
-      <span id="error-message">Couldn't load the board.</span>
-      <button id="retry-btn" type="button">Retry</button>
-    </div>
-
-    <div id="board" class="board">
-      <section id="lane-auto" class="lane lane--auto">
-        <header class="lane-header">
-          <h2>Auto-Resolved</h2>
-          <span id="badge-auto" class="badge">0</span>
-        </header>
-        <div id="cards-auto" class="cards"></div>
-      </section>
-
-      <section id="lane-review" class="lane lane--review">
-        <header class="lane-header">
-          <h2>Needs Human Review</h2>
-          <span id="badge-review" class="badge">0</span>
-        </header>
-        <div id="cards-review" class="cards"></div>
-      </section>
-    </div>
-  </main>
-
-  <div id="detail-panel" class="detail-panel" hidden>
-    <div class="detail-panel-inner">
-      <div class="detail-panel-head">
-        <h2 id="detail-title">Ticket Details</h2>
-        <button id="detail-close" type="button" aria-label="Close">&times;</button>
-      </div>
-      <div id="detail-body" class="detail-body"></div>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zepto Autonomous Support Ticket Resolution Dashboard and Simulation Engine" />
+    <title>Zepto Support Intelligence — Ticket Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
+

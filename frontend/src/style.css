@@ -1,0 +1,253 @@
+/* Modern Design System - Support Ticket Manager Dashboard */
+
+:root {
+  /* Color Palette - Dark Slate & Glassmorphism */
+  --bg-dark: #090d16;
+  --bg-card: rgba(21, 28, 46, 0.75);
+  --bg-card-hover: rgba(30, 41, 67, 0.85);
+  --bg-panel: #111827;
+  --bg-input: #1a2337;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.15);
+
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+
+  /* Accent Colors */
+  --brand-primary: #6366f1;
+  --brand-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+  --brand-glow: rgba(99, 102, 241, 0.35);
+
+  /* Confidence Color Palette */
+  --conf-high-bg: rgba(16, 185, 129, 0.15);
+  --conf-high-border: rgba(16, 185, 129, 0.4);
+  --conf-high-text: #34d399;
+  --conf-high-glow: 0 0 15px rgba(16, 185, 129, 0.25);
+
+  --conf-med-bg: rgba(245, 158, 11, 0.15);
+  --conf-med-border: rgba(245, 158, 11, 0.4);
+  --conf-med-text: #fbbf24;
+  --conf-med-glow: 0 0 15px rgba(245, 158, 11, 0.25);
+
+  --conf-low-bg: rgba(239, 68, 68, 0.15);
+  --conf-low-border: rgba(239, 68, 68, 0.4);
+  --conf-low-text: #f87171;
+  --conf-low-glow: 0 0 15px rgba(239, 68, 68, 0.25);
+
+  /* Action Badges */
+  --action-refund: #818cf8;
+  --action-redelivery: #2dd4bf;
+  --action-coupon: #fbbf24;
+  --action-reject: #f87171;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(217, 70, 239, 0.05) 0%, transparent 45%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* App Container Layout */
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Glassmorphic Panel Base */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: border-color var(--transition-fast);
+}
+
+/* Confidence Modifiers */
+.confidence-high {
+  background: var(--conf-high-bg);
+  border-color: var(--conf-high-border);
+  color: var(--conf-high-text);
+}
+.confidence-medium {
+  background: var(--conf-med-bg);
+  border-color: var(--conf-med-border);
+  color: var(--conf-med-text);
+}
+.confidence-low {
+  background: var(--conf-low-bg);
+  border-color: var(--conf-low-border);
+  color: var(--conf-low-text);
+}
+
+/* Action Tag Colors */
+.badge-action-refund {
+  background: rgba(129, 140, 248, 0.18);
+  color: var(--action-refund);
+  border: 1px solid rgba(129, 140, 248, 0.35);
+}
+.badge-action-redelivery {
+  background: rgba(45, 212, 191, 0.18);
+  color: var(--action-redelivery);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+}
+.badge-action-coupon {
+  background: rgba(251, 191, 36, 0.18);
+  color: var(--action-coupon);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+}
+.badge-action-reject {
+  background: rgba(248, 113, 113, 0.18);
+  color: var(--action-reject);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+}
+
+/* Button Component Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--brand-gradient);
+  color: #ffffff;
+  box-shadow: 0 4px 14px var(--brand-glow);
+}
+.btn-primary:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+.btn-secondary:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--border-light);
+}
+.btn-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+.btn-success:hover:not(:disabled) {
+  opacity: 0.92;
+}
+.btn-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+}
+
+/* Animations */
+@keyframes landingPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+    transform: scale(1.02);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+  }
+}
+.animate-landing {
+  animation: landingPulse 1.2s ease-out;
+}
+
+/* Responsive Grid for Lanes */
+.two-lane-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+@media (max-width: 1279px) {
+  .two-lane-grid {
+    grid-template-columns: 1fr;
+  }
+}
