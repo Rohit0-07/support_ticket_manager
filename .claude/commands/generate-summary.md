@@ -1,0 +1,1 @@
+Generate a post-implementation summary for `$ARGUMENTS`. All prior stages must be complete. Output `features/$ARGUMENTS/3_summary.md` (≤50 lines). Include: what it does, key API endpoints, exported functions, data models, dependencies. This summary will be read by future feature agents for context. Update `features/INDEX.md` status to Complete.

@@ -1,0 +1,1 @@
+Generate pytest tests for `$ARGUMENTS`. Read ONLY `features/$ARGUMENTS/1_spec.md` and `features/$ARGUMENTS/2_tech_spec.md`. Output `features/$ARGUMENTS/tests/test_$ARGUMENTS.py`. NEVER read implementation code — this is unbiased TDD. Cover: happy paths, failure cases, edge cases, boundary conditions, error types. Use httpx.AsyncClient for API tests.

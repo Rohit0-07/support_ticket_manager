@@ -1,0 +1,1 @@
+Validate pipeline integrity for `$ARGUMENTS`. Check: (1) `1_spec.md` exists with user stories, (2) `2_tech_spec.md` exists with function signatures, (3) test files exist in `features/$ARGUMENTS/tests/`, (4) implementation code exists in `backend/app/`, (5) `3_summary.md` exists if feature is marked Complete. Report status for each stage.

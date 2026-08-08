@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/schemas/mcp.json",
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "Provides secure file access to project workspace"
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "description": "Graph memory system for persistent agent context across sessions"
+    }
+  }
+}

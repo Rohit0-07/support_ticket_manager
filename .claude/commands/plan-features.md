@@ -1,0 +1,1 @@
+Analyze the problem statement in `Q3-Design.pdf` and any conversation context. Decompose into discrete features with dependency mapping. Output to `features/INDEX.md`. Follow rules in `AGENTS.md` — do NOT read code files. Include: Personas, Feature Registry (ID, name, phase, status, depends-on), Dependency Graph (mermaid), Build Order, and Feature-to-Summary reference table.

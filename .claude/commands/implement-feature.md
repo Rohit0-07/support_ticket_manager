@@ -1,0 +1,1 @@
+Implement `$ARGUMENTS` in Python/FastAPI. Read `features/$ARGUMENTS/2_tech_spec.md` for contracts and `features/$ARGUMENTS/tests/` for test expectations. Write production code in `backend/app/` that satisfies ALL test assertions. Match function signatures from tech spec exactly. Do NOT modify generated test files.

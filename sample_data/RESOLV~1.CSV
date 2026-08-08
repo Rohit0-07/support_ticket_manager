@@ -1,0 +1,301 @@
+ticket_id,category,description,resolution_action,resolution_note,time_to_resolve_min,csat
+H-1000,missing_item,milk packet missing from my order,redelivery,missing item re-sent,32,5
+H-1001,wrong_item,received someone else's order,redelivery,correct item dispatched,7,5
+H-1002,wrong_item,received someone else's order,redelivery,correct item dispatched,16,3
+H-1003,quality_issue,eggs broken in package,full_refund,refunded order,41,3
+H-1004,quality_issue,eggs broken in package,full_refund,refunded order,30,4
+H-1005,wrong_item,got salted butter instead of unsalted,redelivery,correct item dispatched,6,5
+H-1006,refund_pending,money not back for cancelled order,escalation,sent to payments team,29,3
+H-1007,missing_item,milk packet missing from my order,redelivery,missing item re-sent,41,4
+H-1008,quality_issue,fruits were rotten,full_refund,refunded order,39,3
+H-1009,wrong_item,received someone else's order,redelivery,correct item dispatched,39,3
+H-1010,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,28,3
+H-1011,quality_issue,curd delivered warm and spoiled,partial_refund,refunded item,44,3
+H-1012,missing_item,1 of 3 items missing from delivery,redelivery,missing item re-sent,29,4
+H-1013,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,28,3
+H-1014,quality_issue,curd delivered warm and spoiled,full_refund,refunded order,42,3
+H-1015,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,32,5
+H-1016,missing_item,1 of 3 items missing from delivery,redelivery,missing item re-sent,4,4
+H-1017,missing_item,milk packet missing from my order,partial_refund,refunded item value,9,4
+H-1018,refund_pending,refund not received after 5 days,escalation,sent to payments team,8,4
+H-1019,wrong_item,received someone else's order,redelivery,correct item dispatched,6,4
+H-1020,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,22,3
+H-1021,wrong_item,received someone else's order,partial_refund,refunded difference,42,5
+H-1022,wrong_item,got salted butter instead of unsalted,redelivery,correct item dispatched,40,5
+H-1023,missing_item,ordered 5 items got only 4,partial_refund,refunded item value,12,5
+H-1024,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,10,5
+H-1025,quality_issue,eggs broken in package,partial_refund,refunded item,33,5
+H-1026,wrong_item,received someone else's order,partial_refund,refunded difference,33,4
+H-1027,missing_item,ordered 5 items got only 4,redelivery,missing item re-sent,8,4
+H-1028,quality_issue,eggs broken in package,partial_refund,refunded item,44,4
+H-1029,missing_item,bread not in the bag,partial_refund,refunded item value,6,4
+H-1030,missing_item,bread not in the bag,partial_refund,refunded item value,27,4
+H-1031,refund_pending,money not back for cancelled order,escalation,sent to payments team,16,5
+H-1032,quality_issue,curd delivered warm and spoiled,full_refund,refunded order,32,4
+H-1033,quality_issue,fruits were rotten,partial_refund,refunded item,17,4
+H-1034,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,35,4
+H-1035,refund_pending,refund not received after 5 days,escalation,sent to payments team,20,5
+H-1036,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,44,3
+H-1037,order_late,order took 45 minutes instead of 10,apology_no_action,SLA breach < threshold,10,4
+H-1038,missing_item,milk packet missing from my order,redelivery,missing item re-sent,20,3
+H-1039,refund_pending,money not back for cancelled order,refund_reissue,refund re-triggered,19,3
+H-1040,quality_issue,curd delivered warm and spoiled,partial_refund,refunded item,30,4
+H-1041,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,30,5
+H-1042,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,20,4
+H-1043,missing_item,bread not in the bag,partial_refund,refunded item value,30,4
+H-1044,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,14,5
+H-1045,wrong_item,received someone else's order,partial_refund,refunded difference,30,3
+H-1046,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,17,3
+H-1047,missing_item,ordered 5 items got only 4,partial_refund,refunded item value,18,3
+H-1048,quality_issue,curd delivered warm and spoiled,partial_refund,refunded item,17,5
+H-1049,refund_pending,money not back for cancelled order,refund_reissue,refund re-triggered,9,4
+H-1050,wrong_item,got salted butter instead of unsalted,partial_refund,refunded difference,13,4
+H-1051,wrong_item,received someone else's order,partial_refund,refunded difference,41,4
+H-1052,missing_item,milk packet missing from my order,partial_refund,refunded item value,35,5
+H-1053,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,18,4
+H-1054,wrong_item,got salted butter instead of unsalted,redelivery,correct item dispatched,14,4
+H-1055,refund_pending,refund not received after 5 days,escalation,sent to payments team,45,5
+H-1056,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,14,4
+H-1057,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,41,4
+H-1058,refund_pending,money not back for cancelled order,escalation,sent to payments team,18,5
+H-1059,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,39,4
+H-1060,order_late,order took 45 minutes instead of 10,coupon,issued ₹50 coupon,9,3
+H-1061,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,34,4
+H-1062,quality_issue,eggs broken in package,full_refund,refunded order,34,4
+H-1063,wrong_item,got salted butter instead of unsalted,partial_refund,refunded difference,25,4
+H-1064,wrong_item,got salted butter instead of unsalted,partial_refund,refunded difference,20,5
+H-1065,missing_item,bread not in the bag,partial_refund,refunded item value,17,4
+H-1066,wrong_item,got salted butter instead of unsalted,partial_refund,refunded difference,18,5
+H-1067,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,8,4
+H-1068,refund_pending,money not back for cancelled order,escalation,sent to payments team,43,5
+H-1069,refund_pending,money not back for cancelled order,escalation,sent to payments team,25,4
+H-1070,refund_pending,money not back for cancelled order,refund_reissue,refund re-triggered,22,4
+H-1071,missing_item,1 of 3 items missing from delivery,redelivery,missing item re-sent,30,5
+H-1072,quality_issue,curd delivered warm and spoiled,full_refund,refunded order,10,3
+H-1073,refund_pending,money not back for cancelled order,escalation,sent to payments team,12,5
+H-1074,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,34,4
+H-1075,missing_item,1 of 3 items missing from delivery,redelivery,missing item re-sent,32,3
+H-1076,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,10,3
+H-1077,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,30,4
+H-1078,missing_item,ordered 5 items got only 4,partial_refund,refunded item value,11,4
+H-1079,wrong_item,got salted butter instead of unsalted,redelivery,correct item dispatched,20,4
+H-1080,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,8,4
+H-1081,order_late,still waiting after 30 min,coupon,issued ₹50 coupon,25,4
+H-1082,refund_pending,money not back for cancelled order,refund_reissue,refund re-triggered,9,4
+H-1083,wrong_item,got salted butter instead of unsalted,partial_refund,refunded difference,39,5
+H-1084,wrong_item,received someone else's order,redelivery,correct item dispatched,15,4
+H-1085,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,15,4
+H-1086,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,39,5
+H-1087,quality_issue,curd delivered warm and spoiled,partial_refund,refunded item,30,3
+H-1088,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,23,5
+H-1089,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,30,5
+H-1090,refund_pending,money not back for cancelled order,refund_reissue,refund re-triggered,4,5
+H-1091,missing_item,1 of 3 items missing from delivery,redelivery,missing item re-sent,11,5
+H-1092,wrong_item,received someone else's order,redelivery,correct item dispatched,35,4
+H-1093,order_late,order took 45 minutes instead of 10,apology_no_action,SLA breach < threshold,28,4
+H-1094,refund_pending,money not back for cancelled order,escalation,sent to payments team,36,5
+H-1095,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,20,3
+H-1096,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,39,5
+H-1097,wrong_item,got salted butter instead of unsalted,redelivery,correct item dispatched,40,5
+H-1098,missing_item,milk packet missing from my order,partial_refund,refunded item value,38,5
+H-1099,order_late,delivery way past promised time,coupon,issued ₹50 coupon,43,4
+H-1100,wrong_item,received someone else's order,partial_refund,refunded difference,3,5
+H-1101,quality_issue,fruits were rotten,partial_refund,refunded item,7,3
+H-1102,order_late,delivery way past promised time,coupon,issued ₹50 coupon,9,4
+H-1103,order_late,still waiting after 30 min,coupon,issued ₹50 coupon,4,5
+H-1104,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,10,4
+H-1105,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,18,5
+H-1106,wrong_item,received someone else's order,partial_refund,refunded difference,42,3
+H-1107,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,4,4
+H-1108,order_late,order took 45 minutes instead of 10,coupon,issued ₹50 coupon,35,5
+H-1109,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,21,4
+H-1110,missing_item,ordered 5 items got only 4,redelivery,missing item re-sent,45,4
+H-1111,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,9,5
+H-1112,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,4,4
+H-1113,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,27,3
+H-1114,quality_issue,fruits were rotten,full_refund,refunded order,44,5
+H-1115,refund_pending,money not back for cancelled order,escalation,sent to payments team,11,5
+H-1116,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,13,4
+H-1117,quality_issue,curd delivered warm and spoiled,partial_refund,refunded item,36,5
+H-1118,quality_issue,fruits were rotten,partial_refund,refunded item,44,4
+H-1119,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,11,4
+H-1120,wrong_item,got salted butter instead of unsalted,partial_refund,refunded difference,44,5
+H-1121,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,45,4
+H-1122,quality_issue,fruits were rotten,full_refund,refunded order,23,5
+H-1123,quality_issue,eggs broken in package,full_refund,refunded order,42,5
+H-1124,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,13,4
+H-1125,missing_item,bread not in the bag,partial_refund,refunded item value,33,4
+H-1126,order_late,order took 45 minutes instead of 10,coupon,issued ₹50 coupon,14,5
+H-1127,refund_pending,refund not received after 5 days,escalation,sent to payments team,42,4
+H-1128,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,31,4
+H-1129,quality_issue,fruits were rotten,partial_refund,refunded item,23,3
+H-1130,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,43,5
+H-1131,quality_issue,fruits were rotten,partial_refund,refunded item,19,5
+H-1132,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,15,4
+H-1133,refund_pending,refund not received after 5 days,escalation,sent to payments team,40,3
+H-1134,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,11,3
+H-1135,wrong_item,received someone else's order,partial_refund,refunded difference,37,3
+H-1136,wrong_item,received someone else's order,redelivery,correct item dispatched,44,5
+H-1137,refund_pending,refund not received after 5 days,escalation,sent to payments team,39,5
+H-1138,quality_issue,curd delivered warm and spoiled,full_refund,refunded order,42,5
+H-1139,order_late,still waiting after 30 min,coupon,issued ₹50 coupon,30,5
+H-1140,missing_item,milk packet missing from my order,partial_refund,refunded item value,36,4
+H-1141,missing_item,bread not in the bag,partial_refund,refunded item value,17,3
+H-1142,quality_issue,fruits were rotten,full_refund,refunded order,17,4
+H-1143,wrong_item,received someone else's order,partial_refund,refunded difference,25,3
+H-1144,order_late,order took 45 minutes instead of 10,apology_no_action,SLA breach < threshold,37,5
+H-1145,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,42,3
+H-1146,quality_issue,eggs broken in package,partial_refund,refunded item,33,4
+H-1147,missing_item,ordered 5 items got only 4,partial_refund,refunded item value,29,4
+H-1148,order_late,order took 45 minutes instead of 10,apology_no_action,SLA breach < threshold,11,4
+H-1149,quality_issue,eggs broken in package,full_refund,refunded order,6,4
+H-1150,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,42,3
+H-1151,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,41,5
+H-1152,missing_item,milk packet missing from my order,redelivery,missing item re-sent,20,3
+H-1153,missing_item,bread not in the bag,partial_refund,refunded item value,35,4
+H-1154,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,22,4
+H-1155,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,15,5
+H-1156,quality_issue,eggs broken in package,full_refund,refunded order,4,5
+H-1157,refund_pending,money not back for cancelled order,escalation,sent to payments team,27,4
+H-1158,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,11,3
+H-1159,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,26,4
+H-1160,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,6,4
+H-1161,order_late,delivery way past promised time,coupon,issued ₹50 coupon,3,4
+H-1162,refund_pending,refund not received after 5 days,escalation,sent to payments team,18,3
+H-1163,missing_item,milk packet missing from my order,partial_refund,refunded item value,31,4
+H-1164,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,25,5
+H-1165,order_late,order took 45 minutes instead of 10,apology_no_action,SLA breach < threshold,41,5
+H-1166,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,7,3
+H-1167,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,25,4
+H-1168,refund_pending,money not back for cancelled order,refund_reissue,refund re-triggered,38,4
+H-1169,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,37,5
+H-1170,missing_item,ordered 5 items got only 4,partial_refund,refunded item value,29,5
+H-1171,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,16,4
+H-1172,quality_issue,curd delivered warm and spoiled,partial_refund,refunded item,38,4
+H-1173,missing_item,milk packet missing from my order,redelivery,missing item re-sent,5,4
+H-1174,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,4,5
+H-1175,missing_item,ordered 5 items got only 4,redelivery,missing item re-sent,40,5
+H-1176,wrong_item,got salted butter instead of unsalted,redelivery,correct item dispatched,20,5
+H-1177,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,27,5
+H-1178,refund_pending,refund not received after 5 days,escalation,sent to payments team,16,5
+H-1179,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,6,4
+H-1180,missing_item,1 of 3 items missing from delivery,redelivery,missing item re-sent,41,4
+H-1181,wrong_item,got salted butter instead of unsalted,redelivery,correct item dispatched,24,5
+H-1182,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,6,3
+H-1183,quality_issue,eggs broken in package,full_refund,refunded order,21,5
+H-1184,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,39,5
+H-1185,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,32,4
+H-1186,order_late,still waiting after 30 min,coupon,issued ₹50 coupon,20,3
+H-1187,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,39,5
+H-1188,missing_item,ordered 5 items got only 4,redelivery,missing item re-sent,20,4
+H-1189,quality_issue,fruits were rotten,partial_refund,refunded item,22,5
+H-1190,wrong_item,got salted butter instead of unsalted,partial_refund,refunded difference,31,5
+H-1191,missing_item,1 of 3 items missing from delivery,redelivery,missing item re-sent,32,3
+H-1192,wrong_item,received someone else's order,partial_refund,refunded difference,38,4
+H-1193,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,8,4
+H-1194,quality_issue,fruits were rotten,full_refund,refunded order,31,4
+H-1195,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,34,4
+H-1196,order_late,order took 45 minutes instead of 10,coupon,issued ₹50 coupon,42,3
+H-1197,order_late,delivery way past promised time,coupon,issued ₹50 coupon,5,4
+H-1198,quality_issue,eggs broken in package,full_refund,refunded order,23,3
+H-1199,quality_issue,fruits were rotten,partial_refund,refunded item,19,4
+H-1200,missing_item,1 of 3 items missing from delivery,redelivery,missing item re-sent,41,4
+H-1201,wrong_item,got salted butter instead of unsalted,redelivery,correct item dispatched,35,5
+H-1202,missing_item,milk packet missing from my order,partial_refund,refunded item value,16,4
+H-1203,quality_issue,eggs broken in package,full_refund,refunded order,29,3
+H-1204,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,4,4
+H-1205,quality_issue,curd delivered warm and spoiled,full_refund,refunded order,29,4
+H-1206,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,4,4
+H-1207,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,12,5
+H-1208,missing_item,milk packet missing from my order,partial_refund,refunded item value,23,5
+H-1209,quality_issue,fruits were rotten,full_refund,refunded order,27,5
+H-1210,missing_item,bread not in the bag,partial_refund,refunded item value,44,3
+H-1211,missing_item,bread not in the bag,partial_refund,refunded item value,37,3
+H-1212,quality_issue,eggs broken in package,partial_refund,refunded item,33,5
+H-1213,quality_issue,curd delivered warm and spoiled,full_refund,refunded order,20,4
+H-1214,quality_issue,fruits were rotten,full_refund,refunded order,24,4
+H-1215,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,23,3
+H-1216,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,29,4
+H-1217,missing_item,1 of 3 items missing from delivery,redelivery,missing item re-sent,26,5
+H-1218,quality_issue,curd delivered warm and spoiled,partial_refund,refunded item,29,4
+H-1219,quality_issue,eggs broken in package,partial_refund,refunded item,18,5
+H-1220,quality_issue,eggs broken in package,partial_refund,refunded item,19,4
+H-1221,wrong_item,got salted butter instead of unsalted,partial_refund,refunded difference,8,5
+H-1222,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,34,4
+H-1223,order_late,order took 45 minutes instead of 10,apology_no_action,SLA breach < threshold,13,3
+H-1224,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,33,3
+H-1225,order_late,still waiting after 30 min,coupon,issued ₹50 coupon,4,4
+H-1226,missing_item,bread not in the bag,partial_refund,refunded item value,30,4
+H-1227,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,38,4
+H-1228,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,24,5
+H-1229,quality_issue,eggs broken in package,partial_refund,refunded item,5,3
+H-1230,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,43,5
+H-1231,refund_pending,money not back for cancelled order,refund_reissue,refund re-triggered,11,4
+H-1232,quality_issue,fruits were rotten,partial_refund,refunded item,3,5
+H-1233,quality_issue,eggs broken in package,full_refund,refunded order,44,5
+H-1234,refund_pending,money not back for cancelled order,refund_reissue,refund re-triggered,14,5
+H-1235,quality_issue,fruits were rotten,full_refund,refunded order,17,4
+H-1236,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,39,5
+H-1237,quality_issue,curd delivered warm and spoiled,full_refund,refunded order,23,5
+H-1238,wrong_item,got salted butter instead of unsalted,redelivery,correct item dispatched,5,4
+H-1239,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,42,4
+H-1240,missing_item,ordered 5 items got only 4,redelivery,missing item re-sent,13,3
+H-1241,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,31,4
+H-1242,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,41,3
+H-1243,order_late,order took 45 minutes instead of 10,apology_no_action,SLA breach < threshold,9,4
+H-1244,quality_issue,fruits were rotten,partial_refund,refunded item,41,3
+H-1245,quality_issue,fruits were rotten,partial_refund,refunded item,34,3
+H-1246,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,39,5
+H-1247,refund_pending,money not back for cancelled order,escalation,sent to payments team,21,3
+H-1248,missing_item,bread not in the bag,redelivery,missing item re-sent,34,4
+H-1249,missing_item,ordered 5 items got only 4,partial_refund,refunded item value,45,3
+H-1250,wrong_item,received someone else's order,redelivery,correct item dispatched,17,3
+H-1251,wrong_item,received someone else's order,redelivery,correct item dispatched,24,4
+H-1252,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,23,3
+H-1253,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,36,4
+H-1254,order_late,delivery way past promised time,coupon,issued ₹50 coupon,43,3
+H-1255,order_late,delivery way past promised time,coupon,issued ₹50 coupon,27,4
+H-1256,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,12,5
+H-1257,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,11,4
+H-1258,missing_item,1 of 3 items missing from delivery,partial_refund,refunded item value,30,3
+H-1259,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,14,3
+H-1260,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,27,5
+H-1261,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,36,4
+H-1262,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,45,5
+H-1263,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,25,5
+H-1264,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,17,3
+H-1265,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,23,4
+H-1266,refund_pending,refund not received after 5 days,escalation,sent to payments team,32,4
+H-1267,missing_item,bread not in the bag,redelivery,missing item re-sent,11,5
+H-1268,refund_pending,refund shows processed but not in bank,refund_reissue,refund re-triggered,18,3
+H-1269,wrong_item,received someone else's order,partial_refund,refunded difference,16,5
+H-1270,missing_item,ordered 5 items got only 4,redelivery,missing item re-sent,23,5
+H-1271,refund_pending,money not back for cancelled order,refund_reissue,refund re-triggered,28,4
+H-1272,missing_item,bread not in the bag,redelivery,missing item re-sent,17,4
+H-1273,missing_item,bread not in the bag,redelivery,missing item re-sent,29,4
+H-1274,quality_issue,eggs broken in package,partial_refund,refunded item,16,3
+H-1275,quality_issue,fruits were rotten,full_refund,refunded order,41,5
+H-1276,missing_item,bread not in the bag,partial_refund,refunded item value,8,4
+H-1277,wrong_item,received someone else's order,redelivery,correct item dispatched,6,5
+H-1278,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,15,4
+H-1279,quality_issue,eggs broken in package,full_refund,refunded order,17,4
+H-1280,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,29,4
+H-1281,quality_issue,fruits were rotten,partial_refund,refunded item,5,3
+H-1282,quality_issue,eggs broken in package,partial_refund,refunded item,28,5
+H-1283,missing_item,ordered 5 items got only 4,partial_refund,refunded item value,22,3
+H-1284,order_late,order took 45 minutes instead of 10,coupon,issued ₹50 coupon,20,3
+H-1285,refund_pending,refund not received after 5 days,refund_reissue,refund re-triggered,20,3
+H-1286,missing_item,bread not in the bag,partial_refund,refunded item value,4,3
+H-1287,quality_issue,fruits were rotten,partial_refund,refunded item,40,5
+H-1288,order_late,still waiting after 30 min,apology_no_action,SLA breach < threshold,30,5
+H-1289,missing_item,ordered 5 items got only 4,redelivery,missing item re-sent,32,4
+H-1290,missing_item,bread not in the bag,redelivery,missing item re-sent,27,4
+H-1291,refund_pending,refund not received after 5 days,escalation,sent to payments team,29,5
+H-1292,wrong_item,wrong brand of rice delivered,partial_refund,refunded difference,37,5
+H-1293,order_late,order took 45 minutes instead of 10,apology_no_action,SLA breach < threshold,34,5
+H-1294,wrong_item,wrong brand of rice delivered,redelivery,correct item dispatched,17,5
+H-1295,missing_item,milk packet missing from my order,redelivery,missing item re-sent,31,4
+H-1296,refund_pending,refund shows processed but not in bank,escalation,sent to payments team,22,4
+H-1297,order_late,order took 45 minutes instead of 10,coupon,issued ₹50 coupon,38,4
+H-1298,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,18,3
+H-1299,order_late,delivery way past promised time,apology_no_action,SLA breach < threshold,33,5

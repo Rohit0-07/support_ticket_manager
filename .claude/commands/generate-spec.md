@@ -1,0 +1,1 @@
+Generate a non-technical feature specification for `$ARGUMENTS`. Read `features/INDEX.md` first to find dependencies, then load ONLY those dependency summaries. Output `features/$ARGUMENTS/1_spec.md` with: Problem statement, User Stories (≥2, Given-When-Then), Edge Cases (≥2). ZERO technical details. Do NOT read any code files.

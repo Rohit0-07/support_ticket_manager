@@ -1,0 +1,31 @@
+ticket_id,created_at,order_id,description
+N-000,2026-08-07T20:58:00,ORD-9900,fruits were rotten
+N-001,2026-08-07T20:38:00,ORD-9901,wrong brand of rice delivered
+N-002,2026-08-07T12:34:00,ORD-9902,milk packet missing from my order
+N-003,2026-08-07T19:07:00,ORD-9903,got salted butter instead of unsalted
+N-004,2026-08-07T17:28:00,ORD-9904,eggs broken in package
+N-005,2026-08-07T14:24:00,ORD-9905,milk packet missing from my order
+N-006,2026-08-07T11:22:00,ORD-9906,still waiting after 30 min
+N-007,2026-08-07T18:41:00,ORD-9907,delivery way past promised time
+N-008,2026-08-07T08:09:00,ORD-9908,money not back for cancelled order
+N-009,2026-08-07T13:30:00,ORD-9909,eggs broken in package
+N-010,2026-08-07T12:57:00,ORD-9910,delivery way past promised time
+N-011,2026-08-07T18:19:00,ORD-9911,curd delivered warm and spoiled
+N-012,2026-08-07T10:48:00,ORD-9912,delivery way past promised time
+N-013,2026-08-07T11:03:00,ORD-9913,refund not received after 5 days
+N-014,2026-08-07T11:24:00,ORD-9914,delivery way past promised time
+N-015,2026-08-07T09:02:00,ORD-9915,bread not in the bag
+N-016,2026-08-07T11:51:00,ORD-9916,curd delivered warm and spoiled
+N-017,2026-08-07T22:00:00,ORD-9917,wrong brand of rice delivered
+N-018,2026-08-07T17:34:00,ORD-9918,received someone else's order
+N-019,2026-08-07T20:28:00,ORD-9919,milk packet missing from my order
+N-020,2026-08-07T21:36:00,ORD-9920,delivery way past promised time
+N-021,2026-08-07T19:24:00,ORD-9921,curd delivered warm and spoiled
+N-022,2026-08-07T09:33:00,ORD-9922,delivery way past promised time
+N-023,2026-08-07T13:31:00,ORD-9923,1 of 3 items missing from delivery
+N-024,2026-08-07T19:20:00,ORD-9924,money not back for cancelled order
+N-025,2026-08-07T17:33:00,ORD-9925,still waiting after 30 min
+N-026,2026-08-07T13:19:00,ORD-9926,received someone else's order
+N-027,2026-08-07T18:48:00,ORD-9927,still waiting after 30 min
+N-028,2026-08-07T19:51:00,ORD-9928,money not back for cancelled order
+N-029,2026-08-07T11:02:00,ORD-9929,got salted butter instead of unsalted
