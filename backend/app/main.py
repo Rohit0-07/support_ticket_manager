@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.core.database import init_db
 from app.services.ingestion_service import seed_all
-from app.routes import tickets, orders, seed, similarity
+from app.routes import tickets, orders, seed, similarity, resolution
 
 
 @asynccontextmanager
@@ -42,6 +42,7 @@ app.include_router(tickets.router)
 app.include_router(orders.router)
 app.include_router(seed.router)
 app.include_router(similarity.router)
+app.include_router(resolution.router)
 
 
 @app.get("/")

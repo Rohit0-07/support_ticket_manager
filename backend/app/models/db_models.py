@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Integer, Float
+from sqlalchemy import Boolean, Column, String, Integer, Float
 from app.core.database import Base
 
 
@@ -31,3 +31,18 @@ class OrderContext(Base):
     value = Column(Float, nullable=False)
     delivery_time = Column(String, nullable=False)
     status = Column(String, nullable=False)
+
+
+class ResolutionDecisionLog(Base):
+    __tablename__ = "decision_log"
+
+    ticket_id = Column(String, primary_key=True, index=True)
+    order_id = Column(String, nullable=False)
+    action = Column(String, nullable=True)
+    confidence = Column(Float, nullable=False)
+    auto_resolved = Column(Boolean, nullable=False)
+    escalation_reason = Column(String, nullable=True)
+    similar_ticket_ids = Column(String, nullable=False)
+    reasoning = Column(String, nullable=False)
+    refund_amount = Column(Float, nullable=True)
+    created_at = Column(String, nullable=False)

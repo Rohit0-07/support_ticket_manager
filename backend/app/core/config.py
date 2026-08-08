@@ -26,6 +26,11 @@ class Settings(BaseSettings):
     SIMILARITY_MAX_QUERY_CHARS: int = 512       # EC-06 truncation length
     SIMILARITY_DEDUPE_IDENTICAL: bool = True    # EC-04
 
+    # Resolution Engine settings (env prefix: STM_)
+    RESOLUTION_CONFIDENCE_THRESHOLD: float = 0.75   # BR-02 default confidence bar
+    RESOLUTION_TOP_N_PRECEDENTS: int = 3            # BR-01 top-N precedent set
+    RESOLUTION_PARTIAL_REFUND_RATIO: float = 0.5    # partial_refund = 50% of order value (BR-05)
+
     model_config = SettingsConfigDict(env_prefix="STM_")
 
 

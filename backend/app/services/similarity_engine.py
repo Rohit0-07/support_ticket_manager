@@ -275,6 +275,10 @@ class SimilarityIndex:
                 token_count,
                 min_meaningful_tokens,
             )
+            # Clamp to the documented [0.0, 1.0] contract: cosine similarity of
+            # identical texts can exceed 1.0 by floating-point error
+            # (e.g. 1.0000000000000002), which would violate RankedMatch bounds.
+            adjusted = min(1.0, max(0.0, adjusted))
             if adjusted >= min_score:
                 scored.append((adjusted, self.doc_ids[row_index]))
 
